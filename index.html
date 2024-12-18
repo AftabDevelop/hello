@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Olympics 2028</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: black;
+            color: wheat;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .summer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        .summer h2 {
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px rgba(245, 222, 179, 0.5);
+            letter-spacing: 2px;
+        }
+        .count {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 800px;
+        }
+        .count > div {
+            background-color: rgba(245, 222, 179, 0.1);
+            border: 1px solid rgba(245, 222, 179, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .count > div:hover {
+            transform: scale(1.05);
+            background-color: rgba(245, 222, 179, 0.2);
+        }
+        @media screen and (max-width: 600px) {
+            .summer h2 {
+                font-size: 1.8rem;
+            }
+            .count {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .count > div {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+        @media screen and (max-width: 375px) {
+            .summer h2 {
+                font-size: 1.5rem;
+            }
+            .count > div {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="summer">
+        <h2>Summer Olympics 2028</h2>
+    </div>
+    <div class="count">
+        <div id="root">Days</div>
+        <div id="root1">Hours</div>
+        <div id="root2">Minutes</div>
+        <div id="root3">Seconds</div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
